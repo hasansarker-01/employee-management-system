@@ -2,5 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/myportfo/public_html/
-    - /bin/mkdir -p $DEPLOYPATH
+    - cd /home/myportfo/repositories/employee-management-system
+    - npm install
+    - npm run build
     - /bin/cp -R dist/* $DEPLOYPATH
